@@ -11,71 +11,100 @@ defmodule TimberWatchWeb.MonitoringLive do
     </div>
 
     <div class="grid grid-cols-3 gap-4">
-      <.metric_card
-        metric_name="Temperatura"
-        sensor_name="Plaina 1"
-        value={@temperature}
-        color="from-blue-500 to-blue-200"
-        img_src={~p"/images/thermometer.png"}
-      />
-
-      <.metric_card
-        metric_name="Temperatura"
-        sensor_name="Plaina 2"
-        value={@temperature}
-        color="from-green-500 to-green-200"
-        img_src={~p"/images/thermometer.png"}
-      />
-
-      <.metric_card
-        metric_name="Temperatura"
-        sensor_name="Plaina 2"
-        value={@temperature}
-        color="from-orange-500 to-orange-200"
-        img_src={~p"/images/thermometer.png"}
-      />
-
-      <.metric_card
-        metric_name="Temperatura"
-        sensor_name="Plaina 2"
-        value={@temperature}
-        color="from-red-500 to-red-200"
-        img_src={~p"/images/thermometer.png"}
-      />
-
-      <.metric_card
-        metric_name="Temperatura"
-        sensor_name="Plaina 2"
-        value={@temperature}
-        color="from-yellow-500 to-yellow-200"
-        img_src={~p"/images/thermometer.png"}
-      />
-
-      <.metric_card
-        metric_name="Temperatura"
-        sensor_name="Plaina 2"
-        value={@temperature}
-        color="from-violet-500 to-violet-200"
-        img_src={~p"/images/thermometer.png"}
-      />
+      <%= if Enum.empty?(@sensors) do %>
+        <h2 class="text-gray-400">-- No sensors connected --</h2>
+      <% end %>
+      
+      <%= for sensor <- Keyword.values(Enum.sort(@sensors)) do %>
+        <%= if Map.get(sensor, :disconnected)do %>
+          <.metric_card
+            metric_name={metric_name(sensor.type)}
+            sensor_name={sensor.name <> " - (Desconectado)"}
+            value={sensor.value}
+            suffix_value={sensor.suffix_value}
+            color={pick_color("grey")}
+            img_src={sensor.icon}
+          />
+        <% else %>
+          <.metric_card
+            metric_name={metric_name(sensor.type)}
+            sensor_name={sensor.name}
+            value={sensor.value}
+            suffix_value={sensor.suffix_value}
+            color={pick_color(sensor.color)}
+            img_src={sensor.icon}
+          />
+        <% end %>
+      <% end %>
     </div>
     """
   end
 
   def mount(_params, _session, socket) do
     PubSub.subscribe(TimberWatch.PubSub, "metrics_watcher")
-
-    {:ok, assign(socket, :temperature, 0.0)}
+    sensors = TimberWatch.SensorManager.get_sensors()
+    {:ok, assign(socket, :sensors, sensors)}
   end
 
-  def handle_info({:new_metric, data}, socket) do
-    temperature =
-      data.temperature
-      |> String.to_float()
-      |> Decimal.from_float()
-      |> Decimal.round(2)
-      |> Decimal.to_float()
+  def handle_info({:sensor_joined, sensor}, socket) do
+    new_sensors =
+      Keyword.put(
+        socket.assigns.sensors,
+        String.to_atom(sensor.id),
+        sensor
+      )
 
-    {:noreply, assign(socket, :temperature, temperature)}
+    {:noreply, assign(socket, :sensors, new_sensors)}
+  end
+
+  def handle_info({:new_metric, params}, socket) do
+    sensor = Keyword.get(socket.assigns.sensors, String.to_atom(params.sensor_id))
+
+    new_sensors =
+      if Kernel.is_nil(sensor) do
+        socket.assigns.sensors
+      else
+        updated_sensor =
+          sensor
+          |> Map.put(:value, params.value)
+          |> Map.put(:disconnected, false)
+
+        Keyword.put(
+          socket.assigns.sensors,
+          String.to_atom(params.sensor_id),
+          updated_sensor
+        )
+      end
+
+    {:noreply, assign(socket, :sensors, new_sensors)}
+  end
+
+  def handle_info({:sensor_disconnected, sensor_id}, socket) do
+    sensor =
+      Keyword.get(socket.assigns.sensors, String.to_atom(sensor_id))
+      |> Map.put(:disconnected, true)
+
+    new_sensors = Keyword.put(socket.assigns.sensors, String.to_atom(sensor_id), sensor)
+    {:noreply, assign(socket, :sensors, new_sensors)}
+  end
+
+  defp pick_color(color) do
+    case color do
+      "blue" -> "from-blue-500 to-blue-200"
+      "orange" -> "from-orange-500 to-orange-200"
+      "green" -> "from-green-500 to-green-200"
+      "yellow" -> "from-yellow-500 to-yellow-200"
+      "violet" -> "from-violet-500 to-violet-200"
+      "red" -> "from-red-500 to-red-200"
+      _ -> "from-gray-500 to-gray-200"
+    end
+  end
+
+  defp metric_name(sensor_type) do
+    case sensor_type do
+      "temperature" -> "Temperatura"
+      "vibration" -> "Vibração"
+      _ -> "Genérico"
+    end
   end
 end

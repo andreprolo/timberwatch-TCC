@@ -9,8 +9,12 @@ pub fn connect_to_webscoket() -> WebSocket<MaybeTlsStream<TcpStream>> {
     socket
 }
 
-pub fn join_channel(socket: &mut WebSocket<MaybeTlsStream<TcpStream>>, channel: String) {
-    let message = json::array!["3", "3", channel, "phx_join", json::object! {}];
+pub fn join_channel(
+    socket: &mut WebSocket<MaybeTlsStream<TcpStream>>,
+    channel: String,
+    payload: json::JsonValue,
+) {
+    let message = json::array!["3", "3", channel, "phx_join", payload];
     send_message(socket, json::stringify(message));
 }
 

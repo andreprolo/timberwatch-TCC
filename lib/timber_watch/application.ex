@@ -17,7 +17,11 @@ defmodule TimberWatch.Application do
       # Start Finch
       {Finch, name: TimberWatch.Finch},
       # Start the Endpoint (http/https)
-      TimberWatchWeb.Endpoint
+      TimberWatchWeb.Endpoint,
+      # Channel Monitoring 
+      {TimberWatch.ChannelWatcher, :sensor},
+      # Sensor Manager
+      TimberWatch.SensorManager
       # Start a worker by calling: TimberWatch.Worker.start_link(arg)
       # {TimberWatch.Worker, arg}
     ]

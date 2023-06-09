@@ -8,7 +8,7 @@ defmodule TimberWatchWeb.UserSocket do
 
   ## Channels
 
-  channel "room:*", TimberWatchWeb.RoomChannel
+  channel "room:*", TimberWatchWeb.SensorChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After

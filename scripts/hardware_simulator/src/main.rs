@@ -5,12 +5,16 @@ mod ui;
 mod utils;
 
 fn main() {
-    simulation::temperature::execute();
-    // ui::welcome_message();
-    // let option = ui::choose_option();
-    // ui::proceed_to_simultaion();
-    //
-    // if option == "1" {
-    //     simulation::temperature::execute();
-    // }
+    // simulation::vibration::execute();
+    // simulation::temperature::execute();
+    ui::welcome_message();
+    let sensor_type = ui::choose_sensor_type();
+
+    ui::proceed_to_simultaion();
+
+    match sensor_type.as_str() {
+        "temperature" => simulation::temperature::execute(),
+        "vibration" => simulation::vibration::execute(),
+        _ => panic!("invalid sensor type"),
+    };
 }
