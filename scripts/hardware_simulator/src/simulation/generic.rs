@@ -1,48 +1,38 @@
 use crate::consts::MONITORING_CHANNEL;
 use crate::network::socket_client;
 use crate::utils;
+use crate::utils::noise;
 use rand::Rng;
 use std::net::TcpStream;
+use std::time::Instant;
 use tungstenite::stream::MaybeTlsStream;
 use tungstenite::WebSocket;
 
 pub fn execute(sensor_id: String, sensor_name: String) {
     println!(
-        "{} - {} - Starting vibration simulation...\n",
+        "{} - {} - Starting generic sensor simulation...\n",
         sensor_name, sensor_id
     );
 
     let mut socket = create_and_connect_socket(sensor_id, sensor_name);
 
+    let execution_start = Instant::now();
+    let noise = noise::generate_perlin_noise();
     let mut rng = rand::thread_rng();
-    let mut vibration_detected = false;
 
     loop {
         // utils::sleep(rng.gen_range(100..250));
         utils::sleep(100);
 
-        let vibration_level = if vibration_detected {
-            if rng.gen_bool(0.1) {
-                vibration_detected = false;
-            }
-
-            rng.gen_range(0..=1000)
-        } else {
-            if rng.gen_bool(0.1) {
-                vibration_detected = true;
-            }
-
-            0
-        };
-
-        // println!("Value: {}", vibration_level);
+        let value = rng.gen_range(0.0..100.0);
+        // println!("Value: {:.2}", value);
 
         socket_client::push(
             &mut socket,
             MONITORING_CHANNEL.to_string(),
             "new_metric".to_string(),
             json::object! {
-                new_value: vibration_level.to_string()
+                new_value: value
             },
         );
     }
@@ -58,7 +48,7 @@ fn create_and_connect_socket(
         MONITORING_CHANNEL.to_string(),
         json::object! {
             id: sensor_id,
-            type: "vibration",
+            type: "generic",
             name: sensor_name
         },
     );
