@@ -1,41 +1,37 @@
 use crate::consts::{MONITORING_CHANNEL, SIMULATION_INTERVAL};
 use crate::network::socket_client;
 use crate::utils;
+use crate::utils::noise;
 use rand::Rng;
 use std::net::TcpStream;
+use std::time::Instant;
 use tungstenite::stream::MaybeTlsStream;
 use tungstenite::WebSocket;
 
 pub fn execute(sensor_id: String, sensor_name: String, mode: String) {
     println!(
-        "{} - {} - Starting vibration simulation...\n",
+        "{} - {} - Starting energy simulation...\n",
         sensor_name, sensor_id
     );
 
     let mut socket = create_and_connect_socket(sensor_id, sensor_name);
 
+    let execution_start = Instant::now();
+    let noise = noise::generate_perlin_noise();
     let mut rng = rand::thread_rng();
-    let mut vibration_detected = false;
 
+    let initial_energy = rng.gen_range(4.0..15.0);
     loop {
+        // utils::sleep(rng.gen_range(100..250));
         utils::sleep(SIMULATION_INTERVAL);
 
-        let vibration_level = if vibration_detected {
-            if rng.gen_bool(0.1) {
-                vibration_detected = false;
-            }
-
-            rng.gen_range(0..=1000)
-        } else {
-            if rng.gen_bool(0.1) {
-                vibration_detected = true;
-            }
-
-            0
-        };
+        let energy = noise::generate_energy_variation(
+            &noise,
+            execution_start.elapsed().as_secs_f64() / 1000.0,
+        ) + initial_energy;
 
         if mode == "verbose" {
-            println!("Value: {}", vibration_level);
+            println!("Energy: {:.2}V", energy);
         }
 
         socket_client::push(
@@ -43,7 +39,7 @@ pub fn execute(sensor_id: String, sensor_name: String, mode: String) {
             MONITORING_CHANNEL.to_string(),
             "new_metric".to_string(),
             json::object! {
-                new_value: vibration_level.to_string()
+                new_value: energy
             },
         );
     }
@@ -59,7 +55,7 @@ fn create_and_connect_socket(
         MONITORING_CHANNEL.to_string(),
         json::object! {
             id: sensor_id,
-            type: "vibration",
+            type: "energy",
             name: sensor_name
         },
     );

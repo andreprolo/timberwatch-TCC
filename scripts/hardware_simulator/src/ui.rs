@@ -25,8 +25,8 @@ pub fn choose_sensor_type() -> String {
     println!("Select a sensor type:");
     println!("\t1: Temperature");
     println!("\t2: Vibration");
-    println!("\t3: Sound [in progress...]");
-    println!("\t4: Electric [in progress...]");
+    println!("\t3: Sound");
+    println!("\t4: Energy");
     println!("\t5: Generic (Random Values)");
     println!();
     let option = utils::io::input("Option: ");
@@ -35,7 +35,7 @@ pub fn choose_sensor_type() -> String {
         "1" => "temperature",
         "2" => "vibration",
         "3" => "sound",
-        "4" => "electric",
+        "4" => "energy",
         _ => "generic",
     }
     .to_string()

@@ -8,34 +8,29 @@ use tungstenite::WebSocket;
 
 pub fn execute(sensor_id: String, sensor_name: String, mode: String) {
     println!(
-        "{} - {} - Starting vibration simulation...\n",
+        "{} - {} - Starting sound simulation...\n",
         sensor_name, sensor_id
     );
 
     let mut socket = create_and_connect_socket(sensor_id, sensor_name);
 
     let mut rng = rand::thread_rng();
-    let mut vibration_detected = false;
+
+    let mut sound = rng.gen_range(40.0..75.0);
 
     loop {
         utils::sleep(SIMULATION_INTERVAL);
 
-        let vibration_level = if vibration_detected {
-            if rng.gen_bool(0.1) {
-                vibration_detected = false;
-            }
+        sound += rng.gen_range(0.0..2.0) - 1.0;
 
-            rng.gen_range(0..=1000)
-        } else {
-            if rng.gen_bool(0.1) {
-                vibration_detected = true;
-            }
-
-            0
-        };
+        if sound > 80.0 {
+            sound = 80.0;
+        } else if sound < 40.0 {
+            sound = 40.0;
+        }
 
         if mode == "verbose" {
-            println!("Value: {}", vibration_level);
+            println!("Sound: {:.2} dB", sound);
         }
 
         socket_client::push(
@@ -43,7 +38,7 @@ pub fn execute(sensor_id: String, sensor_name: String, mode: String) {
             MONITORING_CHANNEL.to_string(),
             "new_metric".to_string(),
             json::object! {
-                new_value: vibration_level.to_string()
+                new_value: sound
             },
         );
     }
@@ -59,7 +54,7 @@ fn create_and_connect_socket(
         MONITORING_CHANNEL.to_string(),
         json::object! {
             id: sensor_id,
-            type: "vibration",
+            type: "sound",
             name: sensor_name
         },
     );

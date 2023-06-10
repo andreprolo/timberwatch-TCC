@@ -14,27 +14,17 @@ defmodule TimberWatchWeb.MonitoringLive do
       <%= if Enum.empty?(@sensors) do %>
         <h2 class="text-gray-400">-- No sensors connected --</h2>
       <% end %>
-      
+
       <%= for sensor <- Keyword.values(Enum.sort(@sensors)) do %>
-        <%= if Map.get(sensor, :disconnected)do %>
-          <.metric_card
-            metric_name={metric_name(sensor.type)}
-            sensor_name={sensor.name <> " - (Desconectado)"}
-            value={sensor.value}
-            suffix_value={sensor.suffix_value}
-            color={pick_color("grey")}
-            img_src={sensor.icon}
-          />
-        <% else %>
-          <.metric_card
-            metric_name={metric_name(sensor.type)}
-            sensor_name={sensor.name}
-            value={sensor.value}
-            suffix_value={sensor.suffix_value}
-            color={pick_color(sensor.color)}
-            img_src={sensor.icon}
-          />
-        <% end %>
+        <.metric_card
+          metric_name={metric_name(sensor.type)}
+          sensor_name={sensor.name}
+          disconnected={sensor.disconnected}
+          value={sensor.value}
+          suffix_value={sensor.suffix_value}
+          color={pick_color(sensor)}
+          img_src={sensor.icon}
+        />
       <% end %>
     </div>
     """
@@ -88,7 +78,14 @@ defmodule TimberWatchWeb.MonitoringLive do
     {:noreply, assign(socket, :sensors, new_sensors)}
   end
 
-  defp pick_color(color) do
+  defp pick_color(sensor) do
+    color =
+      if sensor.disconnected do
+        "gray"
+      else
+        sensor.color
+      end
+
     case color do
       "blue" -> "from-blue-500 to-blue-200"
       "orange" -> "from-orange-500 to-orange-200"
@@ -96,6 +93,15 @@ defmodule TimberWatchWeb.MonitoringLive do
       "yellow" -> "from-yellow-500 to-yellow-200"
       "violet" -> "from-violet-500 to-violet-200"
       "red" -> "from-red-500 to-red-200"
+      "cyan" -> "from-cyan-500 to-cyan-200"
+      "fuchsia" -> "from-fuchsia-500 to-fuchsia-200"
+      "rose" -> "from-rose-500 to-rose-200"
+      "indigo" -> "from-indigo-500 to-indigo-200"
+      "sky" -> "from-sky-500 to-sky-200"
+      "teal" -> "from-teal-500 to-teal-200"
+      "emerald" -> "from-emerald-500 to-emerald-200"
+      "lime" -> "from-lime-500 to-lime-200"
+      "amber" -> "from-amber-500 to-amber-200"
       _ -> "from-gray-500 to-gray-200"
     end
   end
@@ -104,6 +110,8 @@ defmodule TimberWatchWeb.MonitoringLive do
     case sensor_type do
       "temperature" -> "Temperatura"
       "vibration" -> "Vibração"
+      "energy" -> "Energia"
+      "sound" -> "Ruído"
       _ -> "Genérico"
     end
   end

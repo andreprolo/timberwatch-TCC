@@ -1,14 +1,12 @@
-use crate::consts::MONITORING_CHANNEL;
+use crate::consts::{MONITORING_CHANNEL, SIMULATION_INTERVAL};
 use crate::network::socket_client;
 use crate::utils;
-use crate::utils::noise;
 use rand::Rng;
 use std::net::TcpStream;
-use std::time::Instant;
 use tungstenite::stream::MaybeTlsStream;
 use tungstenite::WebSocket;
 
-pub fn execute(sensor_id: String, sensor_name: String) {
+pub fn execute(sensor_id: String, sensor_name: String, mode: String) {
     println!(
         "{} - {} - Starting generic sensor simulation...\n",
         sensor_name, sensor_id
@@ -16,16 +14,16 @@ pub fn execute(sensor_id: String, sensor_name: String) {
 
     let mut socket = create_and_connect_socket(sensor_id, sensor_name);
 
-    let execution_start = Instant::now();
-    let noise = noise::generate_perlin_noise();
     let mut rng = rand::thread_rng();
 
     loop {
-        // utils::sleep(rng.gen_range(100..250));
-        utils::sleep(100);
+        utils::sleep(SIMULATION_INTERVAL);
 
         let value = rng.gen_range(0.0..100.0);
-        // println!("Value: {:.2}", value);
+
+        if mode == "verbose" {
+            println!("Value: {:.2}", value);
+        }
 
         socket_client::push(
             &mut socket,

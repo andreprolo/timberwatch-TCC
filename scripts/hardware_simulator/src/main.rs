@@ -1,16 +1,12 @@
-use std::thread;
-
 use rand::seq::SliceRandom;
-use tokio::task;
-
+use std::thread;
 mod consts;
 mod network;
 mod simulation;
 mod ui;
 mod utils;
 
-#[tokio::main]
-async fn main() {
+fn main() {
     ui::welcome_message();
     let simulation_type = ui::choose_simulation_type();
 
@@ -23,7 +19,7 @@ async fn main() {
 
             ui::proceed_to_simultaion();
 
-            simulation::run(sensor_type, sensor_id, sensor_name);
+            simulation::run(sensor_type, sensor_id, sensor_name, "verbose".to_string());
         }
         "multiple_sensors" => {
             let sensors_ammount = ui::get_sensors_amount();
@@ -34,12 +30,12 @@ async fn main() {
                 let sensor_task = thread::spawn(move || {
                     let sensor_name = format!("Sensor {}", i);
                     let sensor_id = format!("sensor-{}", i);
-                    let sensor_type = ["temperature", "vibration", "generic"]
+                    let sensor_type = ["temperature", "vibration", "energy", "sound", "generic"]
                         .choose(&mut rand::thread_rng())
                         .unwrap()
                         .to_string();
 
-                    simulation::run(sensor_type, sensor_id, sensor_name);
+                    simulation::run(sensor_type, sensor_id, sensor_name, "silent".to_string());
                 });
                 sensors.push(sensor_task);
                 utils::sleep(10);
@@ -48,23 +44,6 @@ async fn main() {
             for sensor in sensors {
                 sensor.join().unwrap();
             }
-
-            // let sensors_ammount = ui::get_sensors_amount();
-            //
-            // for i in 0..sensors_ammount {
-            //     task::spawn(async move {
-            //         let sensor_name = format!("Sensor {}", i);
-            //         let sensor_id = format!("sensor-{}", i);
-            //         let sensor_type = ["temperature", "vibration", "generic"]
-            //             .choose(&mut rand::thread_rng())
-            //             .unwrap()
-            //             .to_string();
-            //
-            //         simulation::run(sensor_type, sensor_id, sensor_name);
-            //     });
-            //     utils::sleep(10);
-            // }
-            // loop {}
         }
         _ => panic!("invalid simulation type"),
     }

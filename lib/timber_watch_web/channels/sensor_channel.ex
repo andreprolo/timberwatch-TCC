@@ -27,8 +27,7 @@ defmodule TimberWatchWeb.SensorChannel do
         {:ok, assign(socket, %{sensor_id: sensor_id})}
 
       :in_use ->
-        # {:error, %{message: "This sensor_id is currently being used: #{sensor_id}"}}
-        :error
+        {:error, %{message: "This sensor_id is currently being used: #{sensor_id}"}}
     end
   end
 

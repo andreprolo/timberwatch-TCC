@@ -133,18 +133,39 @@ defmodule TimberWatch.SensorManager do
   defp get_suffix_value(sensor_type) do
     case sensor_type do
       "temperature" -> "°C"
+      "energy" -> "V"
+      "sound" -> "dB"
       _ -> ""
     end
   end
 
   defp generate_color() do
-    ["blue", "orange", "green", "yellow", "violet", "red"] |> Enum.random()
+    [
+      "blue",
+      "orange",
+      "green",
+      "yellow",
+      "violet",
+      "red",
+      "cyan",
+      "fuchsia",
+      "rose",
+      "indigo",
+      "sky",
+      "teal",
+      "emerald",
+      "lime",
+      "amber"
+    ]
+    |> Enum.random()
   end
 
   defp get_sensor_icon(sensor_type) do
     case sensor_type do
       "temperature" -> ~p"/images/thermometer.png"
       "vibration" -> ~p"/images/vibration.png"
+      "energy" -> ~p"/images/energy.png"
+      "sound" -> ~p"/images/sound.png"
       _ -> ~p"/images/default.png"
     end
   end

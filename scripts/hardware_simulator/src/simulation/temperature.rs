@@ -1,4 +1,4 @@
-use crate::consts::MONITORING_CHANNEL;
+use crate::consts::{MONITORING_CHANNEL, SIMULATION_INTERVAL};
 use crate::network::socket_client;
 use crate::utils;
 use crate::utils::noise;
@@ -8,7 +8,7 @@ use std::time::Instant;
 use tungstenite::stream::MaybeTlsStream;
 use tungstenite::WebSocket;
 
-pub fn execute(sensor_id: String, sensor_name: String) {
+pub fn execute(sensor_id: String, sensor_name: String, mode: String) {
     println!(
         "{} - {} - Starting temperature simulation...\n",
         sensor_name, sensor_id
@@ -18,15 +18,16 @@ pub fn execute(sensor_id: String, sensor_name: String) {
 
     let execution_start = Instant::now();
     let noise = noise::generate_perlin_noise();
-    let mut rng = rand::thread_rng();
 
     loop {
-        // utils::sleep(rng.gen_range(100..250));
-        utils::sleep(100);
+        utils::sleep(SIMULATION_INTERVAL);
 
         let temperature =
             noise::generate_temperature(&noise, execution_start.elapsed().as_secs_f64() / 1000.0);
-        // println!("Temperature: {:.2}", temperature);
+
+        if mode == "verbose" {
+            println!("Temperature: {:.2} °C", temperature);
+        }
 
         socket_client::push(
             &mut socket,
