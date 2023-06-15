@@ -24,7 +24,11 @@ defmodule TimberWatchWeb.MonitoringComponents do
       <div class="grid grid-rows-2 grid-flow-col gap-2">
         <div>
           <h2><%= @metric_name %></h2>
-          <p class="text-2xl font-bold"><%= @value %><%= @suffix_value %></p>
+          <%= if Kernel.is_nil(@value) do %>
+            <p class="text-2xl font-bold">--</p>
+          <% else %>
+            <p class="text-2xl font-bold"><%= @value %><%= @suffix_value %></p>
+          <% end %>
         </div>
 
         <div class="flex justify-between items-center w-28 h-16">
