@@ -1,0 +1,251 @@
+{
+  "id" : 1,
+  "name" : "Name",
+  "description" : "Description",
+  "lastModifiedDate" : "2023-10-05T01:01:21Z",
+  "lastModifiedAgent" : "structurizr-javascript",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgbW9kZWwgewogICAgdXNlciA9IHBlcnNvbiAiV29vZHdvcmtpbmcgUHJvZmVzc2lvbmFsIgogICAgICB0aW1iZXJXYXRjaFN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJUaW1iZXIgV2F0Y2giIHsKICAgICAgICB0aW1iZXJXYXRjaEFwaSA9IGNvbnRhaW5lciAiVGltYmVyIFdhdGNoIEFwaSIgIkVsaXhpci9QaG9lbml4IiAiRWxpeGlyL1Bob2VuaXgiCiAgICAgICAgc2luZ2xlUGFnZUFwcGxpY2F0aW9uID0gY29udGFpbmVyICJXZWIgQXBwbGljYXRpb24iICJQcm92aWRlcyBhIHJlYWwtdGltZSB2aWV3IG9mIGFsbCB0aGUgbWV0cmljcyB1c2luZyBQaG9lbml4IExpdmUgVmlldyIgIkhUTUwvSmF2YVNjcmlwdCIgIldlYiBCcm93c2VyIgogICAgICAgIHRpbWJlcldhdGNoRGIgPSBjb250YWluZXIgIkRhdGFiYXNlIiAiU3RvcmVzIHNlbnNvcnMgbWV0cmljcyBpbiB0aW1lLXNlcmllcyB0YWJsZXMiICJUaW1lc2NhbGVEQi9Qb3N0Z3JlU1FMIiAiRGF0YWJhc2UiCiAgICAgIH0KCiAgICAgIHNlbnNvclN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJJT1QgRGV2aWNlcyIgIkNvbGxlY3RzIGFsbCBzb3J0IG9mIG1ldHJpY3MgZXZlcnkgc2Vjb25kIiAiIEV4dGVybmFsIFN5c3RlbSIKCiAgICAgIHVzZXIgLT4gdGltYmVyV2F0Y2hBcGkgIlZpc2l0cyB0aW1iZXJ3YXRjaC5jb20iICJIVFRQUyIKICAgICAgdXNlciAtPiBzaW5nbGVQYWdlQXBwbGljYXRpb24gIlZpZXcgcmVhbC10aW1lIGRhdGEgY29sbGVjdGVkIGJ5IHRoZSBzZW5zb3JzIgogICAgICB0aW1iZXJXYXRjaEFwaSAtPiBzaW5nbGVQYWdlQXBwbGljYXRpb24gIkRlbGl2ZXJzIHRvIHRoZSB1c2VyIHdlYiBicm93c2VyIgogICAgICB0aW1iZXJXYXRjaEFwaSAtPiB0aW1iZXJXYXRjaERiICJSZWFkcyBmcm9tIGFuZCB3cml0ZXMgdG8iICJUQ1AvU1FMIgogICAgICBzZW5zb3JTeXN0ZW0gLT4gdGltYmVyV2F0Y2hBcGkgIlB1Ymxpc2hlcyByZWFsIHRpbWUgZGF0YSB0byIgIldlYlNvY2tldCIKICAgICAgLy9zZW5zb3JTeXN0ZW0gLT4gc2luZ2xlUGFnZUFwcGxpY2F0aW9uICJCcm9hZGNhc3QgbWV0cmljcyB0byIKICB9CgogIHZpZXdzIHsKICAgIHN5c3RlbUNvbnRleHQgdGltYmVyV2F0Y2hTeXN0ZW0gewogICAgICBpbmNsdWRlICoKICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICB9CgogICAgY29udGFpbmVyIHRpbWJlcldhdGNoU3lzdGVtIHsKICAgICAgaW5jbHVkZSAqCiAgICAgICAgYXV0b2xheW91dCBscgogICAgfQoKICAgIHN0eWxlcyB7CiAgICAgIGVsZW1lbnQgIldlYiBCcm93c2VyIiB7CiAgICAgICAgc2hhcGUgV2ViQnJvd3NlcgogICAgICB9CiAgICAgIGVsZW1lbnQgIk1vYmlsZSBBcHAiIHsKICAgICAgICBzaGFwZSBNb2JpbGVEZXZpY2VMYW5kc2NhcGUKICAgICAgfQogICAgICBlbGVtZW50ICJEYXRhYmFzZSIgewogICAgICAgIHNoYXBlIEN5bGluZGVyCiAgICAgIH0KICAgICAgZWxlbWVudCAiRXh0ZXJuYWwgU3lzdGVtIiB7CiAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgIH0KICAgIH0KCiAgICB0aGVtZSBkZWZhdWx0CiAgfQp9Cg=="
+  },
+  "configuration" : { },
+  "model" : {
+    "people" : [ {
+      "id" : "1",
+      "tags" : "Element,Person",
+      "properties" : {
+        "structurizr.dsl.identifier" : "user"
+      },
+      "name" : "Woodworking Professional",
+      "relationships" : [ {
+        "id" : "7",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "449462d0-a058-446d-8389-6eb8f0a71c31"
+        },
+        "sourceId" : "1",
+        "destinationId" : "3",
+        "description" : "Visits timberwatch.com",
+        "technology" : "HTTPS"
+      }, {
+        "id" : "9",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "8c0edd50-f460-4adf-a3e1-d15feaa9b9cc"
+        },
+        "sourceId" : "1",
+        "destinationId" : "4",
+        "description" : "View real-time data collected by the sensors"
+      }, {
+        "id" : "8",
+        "sourceId" : "1",
+        "destinationId" : "2",
+        "description" : "Visits timberwatch.com",
+        "technology" : "HTTPS",
+        "linkedRelationshipId" : "7"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "6",
+      "tags" : "Element,Software System,External System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "sensorsystem"
+      },
+      "name" : "IOT Devices",
+      "description" : "Collects all sort of metrics every second",
+      "relationships" : [ {
+        "id" : "13",
+        "sourceId" : "6",
+        "destinationId" : "2",
+        "description" : "Publishes real time data to",
+        "technology" : "WebSocket",
+        "linkedRelationshipId" : "12"
+      }, {
+        "id" : "12",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "bde4e688-6c84-4185-8f98-8f8e30e6461e"
+        },
+        "sourceId" : "6",
+        "destinationId" : "3",
+        "description" : "Publishes real time data to",
+        "technology" : "WebSocket"
+      } ],
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "2",
+      "tags" : "Element,Software System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "timberwatchsystem"
+      },
+      "name" : "Timber Watch",
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "3",
+        "tags" : "Element,Container",
+        "properties" : {
+          "structurizr.dsl.identifier" : "timberwatchapi"
+        },
+        "name" : "Timber Watch Api",
+        "description" : "Elixir/Phoenix",
+        "relationships" : [ {
+          "id" : "11",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "f30557cf-71ba-4916-98db-efb82e4bb4c3"
+          },
+          "sourceId" : "3",
+          "destinationId" : "5",
+          "description" : "Reads from and writes to",
+          "technology" : "TCP/SQL"
+        }, {
+          "id" : "10",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "2b7a1d65-e159-4107-8a3c-3454044428b1"
+          },
+          "sourceId" : "3",
+          "destinationId" : "4",
+          "description" : "Delivers to the user web browser"
+        } ],
+        "technology" : "Elixir/Phoenix",
+        "documentation" : { }
+      }, {
+        "id" : "4",
+        "tags" : "Element,Container,Web Browser",
+        "properties" : {
+          "structurizr.dsl.identifier" : "singlepageapplication"
+        },
+        "name" : "Web Application",
+        "description" : "Provides a real-time view of all the metrics using Phoenix Live View",
+        "technology" : "HTML/JavaScript",
+        "documentation" : { }
+      }, {
+        "id" : "5",
+        "tags" : "Element,Container,Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "timberwatchdb"
+        },
+        "name" : "Database",
+        "description" : "Stores sensors metrics in time-series tables",
+        "technology" : "TimescaleDB/PostgreSQL",
+        "documentation" : { }
+      } ],
+      "documentation" : { }
+    } ]
+  },
+  "documentation" : { },
+  "views" : {
+    "systemContextViews" : [ {
+      "key" : "SystemContext-001",
+      "order" : 1,
+      "softwareSystemId" : "2",
+      "paperSize" : "A5_Landscape",
+      "dimensions" : {
+        "width" : 1616,
+        "height" : 1416
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "13"
+      }, {
+        "id" : "8"
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 233,
+        "y" : 208
+      }, {
+        "id" : "2",
+        "x" : 958,
+        "y" : 583
+      }, {
+        "id" : "6",
+        "x" : 208,
+        "y" : 908
+      } ]
+    } ],
+    "containerViews" : [ {
+      "key" : "Container-001",
+      "order" : 2,
+      "softwareSystemId" : "2",
+      "dimensions" : {
+        "width" : 2370,
+        "height" : 1437
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "11"
+      }, {
+        "id" : "12"
+      }, {
+        "id" : "7"
+      }, {
+        "id" : "10"
+      }, {
+        "id" : "9"
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 224,
+        "y" : 799
+      }, {
+        "id" : "3",
+        "x" : 949,
+        "y" : 245
+      }, {
+        "id" : "4",
+        "x" : 1699,
+        "y" : 845
+      }, {
+        "id" : "5",
+        "x" : 1699,
+        "y" : 245
+      }, {
+        "id" : "6",
+        "x" : 199,
+        "y" : 199
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "Web Browser",
+          "shape" : "WebBrowser"
+        }, {
+          "tag" : "Mobile App",
+          "shape" : "MobileDeviceLandscape"
+        }, {
+          "tag" : "Database",
+          "shape" : "Cylinder"
+        }, {
+          "tag" : "External System",
+          "background" : "#999999",
+          "color" : "#ffffff"
+        } ]
+      },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ],
+      "terminology" : { },
+      "metadataSymbols" : "SquareBrackets",
+      "lastSavedView" : "Container-001"
+    }
+  }
+}
