@@ -6,12 +6,7 @@ use std::thread::sleep;
 
 use anyhow::{bail, Result};
 
-use esp_idf_hal::prelude::Peripherals;
-use embedded_svc::wifi::ClientConfiguration;
-use embedded_svc::wifi::Configuration;
-use esp_idf_svc::wifi::EspWifi;
-use esp_idf_svc::nvs::EspDefaultNvsPartition;
-use esp_idf_svc::eventloop::EspSystemEventLoop;
+mod network;
 
 fn main() {
     // It is necessary to call this function once. Otherwise some patches to the runtime
@@ -20,69 +15,28 @@ fn main() {
     // Bind the log crate to the ESP Logging facilities
     esp_idf_svc::log::EspLogger::initialize_default();
 
-    let peripherals = Peripherals::take().unwrap();
-    let sys_loop = EspSystemEventLoop::take().unwrap();
-    let nvs = EspDefaultNvsPartition::take().unwrap();
+    network::wifi::connect_to_wifi("Aluno Unisep", "alunounisep");
+    // network::wifi::connect_to_wifi("Segfy", "12fyseg3");
 
-    let mut wifi_driver = EspWifi::new(
-        peripherals.modem,
-        sys_loop,
-        Some(nvs)
-    ).unwrap();
+    sleep(Duration::new(5, 0));
+    let mut client = network::socket_client::connect_to_websocket().unwrap();
+    sleep(Duration::new(5, 0));
 
-    wifi_driver.set_configuration(&Configuration::Client(ClientConfiguration{
-        ssid: "Segfy".into(),
-        password: "12fyseg3".into(),
-        ..Default::default()
-    })).unwrap();
-
-    wifi_driver.start().unwrap();
-    wifi_driver.connect().unwrap();
-
-    while !wifi_driver.is_connected().unwrap(){
-        let config = wifi_driver.get_configuration().unwrap();
-        println!("Waiting for station {:?}", config);
-    }
-    println!("Should be connected now");
-
-    loop {
-        println!("IP info: {:?}", wifi_driver.sta_netif().get_ip_info().unwrap());
-
-        call_server();
-
-        sleep(Duration::new(10,0));
-    }
-}
-
-fn call_server() -> anyhow::Result<()> {
-    use embedded_svc::http::{self, client::*, status, Headers, Status};
-    use embedded_svc::io::Read;
-    use embedded_svc::utils::io;
-    use esp_idf_svc::http::client::*;
-
-    let url = String::from("http://192.168.100.191:4000");
-
-    info!("About to fetch content from {}", url);
-
-    let mut client = Client::wrap(EspHttpConnection::new(&Configuration {
-        crt_bundle_attach: Some(esp_idf_sys::esp_crt_bundle_attach),
-
-        ..Default::default()
-    })?);
-
-    let mut response = client.get(&url)?.submit()?;
-
-    let mut body = [0_u8; 3048];
-
-    let read = io::try_read_full(&mut response, &mut body).map_err(|err| err.0)?;
-
-    info!(
-        "Body (truncated to 3K):\n{:?}",
-        String::from_utf8_lossy(&body[..read]).into_owned()
+    network::socket_client::join_channel(&mut client, "room:monitoring",
+        json::object! {
+            id: "esp32-1",
+            type: "temperature",
+            name: "ESP32" 
+        }
     );
 
-    // Complete the response
-    while response.read(&mut body)? > 0 {}
+    let mut temperature = 30.0;
+    loop {
+        network::socket_client::push(&mut client, "room:monitoring", "new_metric", json::object! {
+            new_value: temperature
+        });
 
-    Ok(())
+        temperature += 0.1;
+        sleep(Duration::new(1, 0));
+    }
 }
