@@ -50,7 +50,8 @@ defmodule TimberWatch.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:tz, "~> 0.26.2"}
+      {:tz, "~> 0.26.2"},
+      {:timescale, "~> 0.1.0"},
     ]
   end
 

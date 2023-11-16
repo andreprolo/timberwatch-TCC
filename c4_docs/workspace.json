@@ -2,10 +2,10 @@
   "id" : 1,
   "name" : "Name",
   "description" : "Description",
-  "lastModifiedDate" : "2023-10-20T00:53:13Z",
+  "lastModifiedDate" : "2023-11-01T16:24:45Z",
   "lastModifiedAgent" : "structurizr-javascript",
   "properties" : {
-    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgbW9kZWwgewogICAgdXNlciA9IHBlcnNvbiAiV29vZHdvcmtpbmcgUHJvZmVzc2lvbmFsIgogICAgICB0aW1iZXJXYXRjaFN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJUaW1iZXIgV2F0Y2giIHsKICAgICAgICB0aW1iZXJXYXRjaEFwaSA9IGNvbnRhaW5lciAiVGltYmVyIFdhdGNoIEFwaSIgIkVsaXhpci9QaG9lbml4IiAiRWxpeGlyL1Bob2VuaXgiIHsKICAgICAgICAgIHNpZ25pbkNvbnRyb2xsZXIgPSBjb21wb25lbnQgIlNpZ24gSW4gQ29udHJvbGxlciIgIkFsbG93cyB1c2VycyB0byBzaWduIGluIHRvIHRoZSBJbnRlcm5ldCBCYW5raW5nIFN5c3RlbS4iICJTcHJpbmcgTVZDIFJlc3QgQ29udHJvbGxlciIKICAgICAgICB9CiAgICAgICAgc2luZ2xlUGFnZUFwcGxpY2F0aW9uID0gY29udGFpbmVyICJXZWIgQXBwbGljYXRpb24iICJQcm92aWRlcyBhIHJlYWwtdGltZSB2aWV3IG9mIGFsbCB0aGUgbWV0cmljcyB1c2luZyBQaG9lbml4IExpdmUgVmlldyIgIkhUTUwvSmF2YVNjcmlwdCIgIldlYiBCcm93c2VyIgogICAgICAgIHRpbWJlcldhdGNoRGIgPSBjb250YWluZXIgIkRhdGFiYXNlIiAiU3RvcmVzIHNlbnNvcnMgbWV0cmljcyBpbiB0aW1lLXNlcmllcyB0YWJsZXMiICJUaW1lc2NhbGVEQi9Qb3N0Z3JlU1FMIiAiRGF0YWJhc2UiCiAgICAgIH0KCiAgICAgIHNlbnNvclN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJJT1QgRGV2aWNlcyIgIkNvbGxlY3RzIGFsbCBzb3J0IG9mIG1ldHJpY3MgZXZlcnkgc2Vjb25kIiAiIEV4dGVybmFsIFN5c3RlbSIKCiAgICAgIHVzZXIgLT4gdGltYmVyV2F0Y2hBcGkgIlZpc2l0cyB0aW1iZXJ3YXRjaC5jb20iICJIVFRQUyIKICAgICAgdXNlciAtPiBzaW5nbGVQYWdlQXBwbGljYXRpb24gIlZpZXcgcmVhbC10aW1lIGRhdGEgY29sbGVjdGVkIGJ5IHRoZSBzZW5zb3JzIgogICAgICB0aW1iZXJXYXRjaEFwaSAtPiBzaW5nbGVQYWdlQXBwbGljYXRpb24gIkRlbGl2ZXJzIHRvIHRoZSB1c2VyIHdlYiBicm93c2VyIgogICAgICB0aW1iZXJXYXRjaEFwaSAtPiB0aW1iZXJXYXRjaERiICJSZWFkcyBmcm9tIGFuZCB3cml0ZXMgdG8iICJUQ1AvU1FMIgogICAgICBzZW5zb3JTeXN0ZW0gLT4gdGltYmVyV2F0Y2hBcGkgIlB1Ymxpc2hlcyByZWFsIHRpbWUgZGF0YSB0byIgIldlYlNvY2tldCIKCiAgICAgIHNpbmdsZVBhZ2VBcHBsaWNhdGlvbiAtPiBzaWduaW5Db250cm9sbGVyCiAgfQoKICB2aWV3cyB7CiAgICBzeXN0ZW1Db250ZXh0IHRpbWJlcldhdGNoU3lzdGVtIHsKICAgICAgaW5jbHVkZSAqCiAgICAgICAgYXV0b2xheW91dCBscgogICAgfQoKICAgIGNvbnRhaW5lciB0aW1iZXJXYXRjaFN5c3RlbSB7CiAgICAgIGluY2x1ZGUgKgogICAgICAgIGF1dG9sYXlvdXQgbHIKICAgIH0KCiAgICBzdHlsZXMgewogICAgICBlbGVtZW50ICJXZWIgQnJvd3NlciIgewogICAgICAgIHNoYXBlIFdlYkJyb3dzZXIKICAgICAgfQogICAgICBlbGVtZW50ICJNb2JpbGUgQXBwIiB7CiAgICAgICAgc2hhcGUgTW9iaWxlRGV2aWNlTGFuZHNjYXBlCiAgICAgIH0KICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICBzaGFwZSBDeWxpbmRlcgogICAgICB9CiAgICAgIGVsZW1lbnQgIkV4dGVybmFsIFN5c3RlbSIgewogICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICB9CiAgICB9CgogICAgdGhlbWUgZGVmYXVsdAogIH0KfQo="
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgbW9kZWwgewogICAgdXNlciA9IHBlcnNvbiAiV29vZHdvcmtpbmcgUHJvZmVzc2lvbmFsIgogICAgICB0aW1iZXJXYXRjaFN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJUaW1iZXJXYXRjaCIgewogICAgICAgIHRpbWJlcldhdGNoQXBpID0gY29udGFpbmVyICJUaW1iZXJXYXRjaCBBcGkiICJFbGl4aXIvUGhvZW5peCIgIkVsaXhpci9QaG9lbml4IiB7CiAgICAgICAgICB0aW1iZXJXYXRjaExpdmVWaWV3ID0gY29tcG9uZW50ICJNb25pdG9yaW5nIExpdmVWaWV3IiAiTWFuYWdlIGNvbm5lY3Rpb25zIHRvIGNsaWVudCB3ZWIgYnJvd3NlcnMgYW5kIGRpbmFteWMgY2hhbmdlcyB0aGUgSFRNTCBpbiByZWFsIHRpbWUiICJQaG9lbml4IExpdmVWaWV3IFBhZ2UiCiAgICAgICAgICB0aW1iZXJXYXRjaFB1YlN1YiA9IGNvbXBvbmVudCAiUHViU3ViIiAiUmVhbHRpbWUgUHVibGlzaGVyL1N1YnNjcmliZXIgc2VydmljZSIgIlBob2VuaXggUHViU3ViIgogICAgICAgICAgdGltYmVyV2F0Y2hTZW5zb3JNYW5hZ2VyID0gY29tcG9uZW50ICJTZW5zb3JNYW5hZ2VyIiAiSW4tbWVtbW9yeSBzdG9yZSBvZiBjdXJyZW50IGNvbmVjdGVkIHNlbnNvcnMiICJHZW5TZXJ2ZXIiCiAgICAgICAgICBzZW5zb3JDaGFubmVsID0gY29tcG9uZW50ICJTZW5zb3JDaGFubmVsIiAiTWFuYWdlIGNvbm5lY3Rpb25zIHdpdGggZWFjaCBzZW5zb3IgdmlhIHdlYnNvY2tldCIgIlBob2VuaXggQ2hhbm5lbCIKICAgICAgICB9CiAgICAgICAgc2luZ2xlUGFnZUFwcGxpY2F0aW9uID0gY29udGFpbmVyICJXZWIgQnJvd3NlciIgIlByb3ZpZGVzIGEgcmVhbC10aW1lIHZpZXcgb2YgYWxsIHRoZSBtZXRyaWNzIHVzaW5nIFBob2VuaXggTGl2ZSBWaWV3IiAiSFRNTC9KYXZhU2NyaXB0IiAiV2ViIEJyb3dzZXIiCiAgICAgICAgLy90aW1iZXJXYXRjaERiID0gY29udGFpbmVyICJEYXRhYmFzZSIgIlN0b3JlcyBzZW5zb3JzIG1ldHJpY3MgaW4gdGltZS1zZXJpZXMgdGFibGVzIiAiVGltZXNjYWxlREIvUG9zdGdyZVNRTCIgIkRhdGFiYXNlIgogICAgICB9CgogICAgICBzZW5zb3JTeXN0ZW0gPSBzb2Z0d2FyZVN5c3RlbSAiSU9UIERldmljZXMiICJDb2xsZWN0cyBhbGwgc29ydCBvZiBtZXRyaWNzIGV2ZXJ5IHNlY29uZCIgIkV4dGVybmFsIFN5c3RlbSIKCiAgICAgIHVzZXIgLT4gdGltYmVyV2F0Y2hBcGkgIlZpc2l0cyB0aW1iZXJ3YXRjaC5jb20iICJIVFRQUyIKICAgICAgdXNlciAtPiBzaW5nbGVQYWdlQXBwbGljYXRpb24gIlZpZXcgcmVhbC10aW1lIGRhdGEgY29sbGVjdGVkIGJ5IHRoZSBzZW5zb3JzIgogICAgICB0aW1iZXJXYXRjaEFwaSAtPiBzaW5nbGVQYWdlQXBwbGljYXRpb24gIkRlbGl2ZXJzIHRvIHRoZSB1c2VyIHdlYiBicm93c2VyIgogICAgICAvL3RpbWJlcldhdGNoQXBpIC0+IHRpbWJlcldhdGNoRGIgIlJlYWRzIGZyb20gYW5kIHdyaXRlcyB0byIgIlRDUC9TUUwiCiAgICAgIHNlbnNvclN5c3RlbSAtPiB0aW1iZXJXYXRjaEFwaSAiUHVibGlzaGVzIHJlYWwgdGltZSBkYXRhIHRvIiAiV2ViU29ja2V0IgoKICAgICAgc2luZ2xlUGFnZUFwcGxpY2F0aW9uIC0+IHRpbWJlcldhdGNoTGl2ZVZpZXcgIkxvYWRzIHdlYiBwYWdlIHdpdGggc2Vuc29ycyBkYXRhIiAiSFRUUFMiCiAgICAgIHRpbWJlcldhdGNoTGl2ZVZpZXcgLT4gdGltYmVyV2F0Y2hQdWJTdWIgIlN1YnNjcmliZXMgdG8gdG9waWMgJ21ldHJpY3Nfd2F0Y2hlciciICJQdWIvU3ViIgogICAgICB0aW1iZXJXYXRjaExpdmVWaWV3IC0+IHRpbWJlcldhdGNoU2Vuc29yTWFuYWdlciAiRmV0Y2ggc2Vuc29ycyBkYXRhIHdpdGggbWV0aG9kIGdldF9zZW5zb3JzKCkiICJHZW5TZXJ2ZXIvQ2FsbCIKICAgICAgdGltYmVyV2F0Y2hTZW5zb3JNYW5hZ2VyIC0+IHRpbWJlcldhdGNoUHViU3ViICJOb3RpZnkgdXBkYXRlcyBtYWRlIG9uIHNlbnNvcnMgZGF0YSIgIlB1Yi9TdWIiCiAgICAgIHRpbWJlcldhdGNoUHViU3ViIC0+IHRpbWJlcldhdGNoTGl2ZVZpZXcgIkJyb2FkY2FzdCB1cGRhdGVzIG1hZGUgb24gc2Vuc29ycyBkYXRhIiAiUHViL1N1YiIKICAgICAgc2Vuc29yU3lzdGVtIC0+IHNlbnNvckNoYW5uZWwgIlNlbmRzIHJlYWwgdGltZSBkYXRhIHRvIiAiV2ViU29ja2V0IgogICAgICBzZW5zb3JDaGFubmVsIC0+IHRpbWJlcldhdGNoU2Vuc29yTWFuYWdlciAiUmVnaXN0ZXIgb3IgdXBkYXRlcyBhIHNlbnNvciIgIkdlblNlcnZlci9DYXN0IgogICAgICAvL3RpbWJlcldhdGNoU2Vuc29yTWFuYWdlciAtPiB0aW1iZXJXYXRjaERiICJTYXZlIHNlbnNvciBzdGF0ZSIgIlRDUC9TUUwiCiAgfQoKICB2aWV3cyB7CiAgICBzeXN0ZW1Db250ZXh0IHRpbWJlcldhdGNoU3lzdGVtIHsKICAgICAgaW5jbHVkZSAqCiAgICAgICAgYXV0b2xheW91dCBscgogICAgfQoKICAgIGNvbnRhaW5lciB0aW1iZXJXYXRjaFN5c3RlbSB7CiAgICAgIGluY2x1ZGUgKgogICAgICAgIC8vYXV0b2xheW91dCBscgogICAgfQoKICAgIGNvbXBvbmVudCB0aW1iZXJXYXRjaEFwaSB7CiAgICAgIGluY2x1ZGUgKiB1c2VyCiAgICAgIC8vYXV0b2xheW91dCAKICAgIH0KCiAgICBzdHlsZXMgewogICAgICBlbGVtZW50ICJXZWIgQnJvd3NlciIgewogICAgICAgIHNoYXBlIFdlYkJyb3dzZXIKICAgICAgfQogICAgICBlbGVtZW50ICJNb2JpbGUgQXBwIiB7CiAgICAgICAgc2hhcGUgTW9iaWxlRGV2aWNlTGFuZHNjYXBlCiAgICAgIH0KICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICBzaGFwZSBDeWxpbmRlcgogICAgICB9CiAgICAgIGVsZW1lbnQgIkV4dGVybmFsIFN5c3RlbSIgewogICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICB9CiAgICB9CgogICAgdGhlbWUgZGVmYXVsdAogIH0KfQo="
   },
   "configuration" : { },
   "model" : {
@@ -17,121 +17,36 @@
       },
       "name" : "Woodworking Professional",
       "relationships" : [ {
-        "id" : "8",
+        "id" : "10",
         "tags" : "Relationship",
         "properties" : {
-          "structurizr.dsl.identifier" : "b1b467fe-1cd9-4a48-adac-5497fd5f308d"
+          "structurizr.dsl.identifier" : "5fcacabd-9c48-417c-a07d-652b649bfe06"
         },
         "sourceId" : "1",
         "destinationId" : "3",
         "description" : "Visits timberwatch.com",
         "technology" : "HTTPS"
       }, {
-        "id" : "10",
-        "tags" : "Relationship",
-        "properties" : {
-          "structurizr.dsl.identifier" : "a0ccc3c0-8aa1-40f8-bc1d-9fbc18a1baef"
-        },
-        "sourceId" : "1",
-        "destinationId" : "5",
-        "description" : "View real-time data collected by the sensors"
-      }, {
-        "id" : "9",
+        "id" : "11",
         "sourceId" : "1",
         "destinationId" : "2",
         "description" : "Visits timberwatch.com",
         "technology" : "HTTPS",
-        "linkedRelationshipId" : "8"
+        "linkedRelationshipId" : "10"
+      }, {
+        "id" : "12",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "4eec9487-d6bc-4fff-8513-e6ae22cbcc14"
+        },
+        "sourceId" : "1",
+        "destinationId" : "8",
+        "description" : "View real-time data collected by the sensors"
       } ],
       "location" : "Unspecified"
     } ],
     "softwareSystems" : [ {
-      "id" : "2",
-      "tags" : "Element,Software System",
-      "properties" : {
-        "structurizr.dsl.identifier" : "timberwatchsystem"
-      },
-      "name" : "Timber Watch",
-      "location" : "Unspecified",
-      "containers" : [ {
-        "id" : "6",
-        "tags" : "Element,Container,Database",
-        "properties" : {
-          "structurizr.dsl.identifier" : "timberwatchdb"
-        },
-        "name" : "Database",
-        "description" : "Stores sensors metrics in time-series tables",
-        "technology" : "TimescaleDB/PostgreSQL",
-        "documentation" : { }
-      }, {
-        "id" : "5",
-        "tags" : "Element,Container,Web Browser",
-        "properties" : {
-          "structurizr.dsl.identifier" : "singlepageapplication"
-        },
-        "name" : "Web Application",
-        "description" : "Provides a real-time view of all the metrics using Phoenix Live View",
-        "relationships" : [ {
-          "id" : "16",
-          "sourceId" : "5",
-          "destinationId" : "3",
-          "linkedRelationshipId" : "15"
-        }, {
-          "id" : "15",
-          "tags" : "Relationship",
-          "properties" : {
-            "structurizr.dsl.identifier" : "78d843de-81fb-40df-8ffa-f947693f536f"
-          },
-          "sourceId" : "5",
-          "destinationId" : "4"
-        } ],
-        "technology" : "HTML/JavaScript",
-        "documentation" : { }
-      }, {
-        "id" : "3",
-        "tags" : "Element,Container",
-        "properties" : {
-          "structurizr.dsl.identifier" : "timberwatchapi"
-        },
-        "name" : "Timber Watch Api",
-        "description" : "Elixir/Phoenix",
-        "relationships" : [ {
-          "id" : "12",
-          "tags" : "Relationship",
-          "properties" : {
-            "structurizr.dsl.identifier" : "68aa193a-b6be-4dd3-93c3-90438ce6f1a7"
-          },
-          "sourceId" : "3",
-          "destinationId" : "6",
-          "description" : "Reads from and writes to",
-          "technology" : "TCP/SQL"
-        }, {
-          "id" : "11",
-          "tags" : "Relationship",
-          "properties" : {
-            "structurizr.dsl.identifier" : "7c32016c-0e74-4fe6-8a3f-1047f48d2c9e"
-          },
-          "sourceId" : "3",
-          "destinationId" : "5",
-          "description" : "Delivers to the user web browser"
-        } ],
-        "technology" : "Elixir/Phoenix",
-        "components" : [ {
-          "id" : "4",
-          "tags" : "Element,Component",
-          "properties" : {
-            "structurizr.dsl.identifier" : "signincontroller"
-          },
-          "name" : "Sign In Controller",
-          "description" : "Allows users to sign in to the Internet Banking System.",
-          "technology" : "Spring MVC Rest Controller",
-          "documentation" : { }
-        } ],
-        "documentation" : { }
-      } ],
-      "documentation" : { }
-    }, {
-      "id" : "7",
+      "id" : "9",
       "tags" : "Element,Software System,External System",
       "properties" : {
         "structurizr.dsl.identifier" : "sensorsystem"
@@ -139,24 +54,187 @@
       "name" : "IOT Devices",
       "description" : "Collects all sort of metrics every second",
       "relationships" : [ {
-        "id" : "13",
+        "id" : "22",
         "tags" : "Relationship",
         "properties" : {
-          "structurizr.dsl.identifier" : "a1551202-f066-458b-a605-ac251a67a7b7"
+          "structurizr.dsl.identifier" : "4201f7c6-c391-4007-9281-61afa52fa983"
         },
-        "sourceId" : "7",
+        "sourceId" : "9",
+        "destinationId" : "7",
+        "description" : "Sends real time data to",
+        "technology" : "WebSocket"
+      }, {
+        "id" : "14",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "c17ba395-2470-4934-bf5d-0738114304e3"
+        },
+        "sourceId" : "9",
         "destinationId" : "3",
         "description" : "Publishes real time data to",
         "technology" : "WebSocket"
       }, {
-        "id" : "14",
-        "sourceId" : "7",
+        "id" : "15",
+        "sourceId" : "9",
         "destinationId" : "2",
         "description" : "Publishes real time data to",
         "technology" : "WebSocket",
-        "linkedRelationshipId" : "13"
+        "linkedRelationshipId" : "14"
       } ],
       "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "2",
+      "tags" : "Element,Software System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "timberwatchsystem"
+      },
+      "name" : "TimberWatch",
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "3",
+        "tags" : "Element,Container",
+        "properties" : {
+          "structurizr.dsl.identifier" : "timberwatchapi"
+        },
+        "name" : "TimberWatch Api",
+        "description" : "Elixir/Phoenix",
+        "relationships" : [ {
+          "id" : "13",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "07fca114-20b7-44d3-9e6c-18bc78bab1b8"
+          },
+          "sourceId" : "3",
+          "destinationId" : "8",
+          "description" : "Delivers to the user web browser"
+        } ],
+        "technology" : "Elixir/Phoenix",
+        "components" : [ {
+          "id" : "6",
+          "tags" : "Element,Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "timberwatchsensormanager"
+          },
+          "name" : "SensorManager",
+          "description" : "In-memmory store of current conected sensors",
+          "relationships" : [ {
+            "id" : "20",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "29ff96d6-3d27-452c-8800-a2aeadd10a44"
+            },
+            "sourceId" : "6",
+            "destinationId" : "5",
+            "description" : "Notify updates made on sensors data",
+            "technology" : "Pub/Sub"
+          } ],
+          "technology" : "GenServer",
+          "documentation" : { }
+        }, {
+          "id" : "5",
+          "tags" : "Element,Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "timberwatchpubsub"
+          },
+          "name" : "PubSub",
+          "description" : "Realtime Publisher/Subscriber service",
+          "relationships" : [ {
+            "id" : "21",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "107893f3-914d-4343-af56-b6074301f529"
+            },
+            "sourceId" : "5",
+            "destinationId" : "4",
+            "description" : "Broadcast updates made on sensors data",
+            "technology" : "Pub/Sub"
+          } ],
+          "technology" : "Phoenix PubSub",
+          "documentation" : { }
+        }, {
+          "id" : "7",
+          "tags" : "Element,Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "sensorchannel"
+          },
+          "name" : "SensorChannel",
+          "description" : "Manage connections with each sensor via websocket",
+          "relationships" : [ {
+            "id" : "23",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "ebedd8e2-f043-40d7-a0a7-fed04f384a34"
+            },
+            "sourceId" : "7",
+            "destinationId" : "6",
+            "description" : "Register or updates a sensor",
+            "technology" : "GenServer/Cast"
+          } ],
+          "technology" : "Phoenix Channel",
+          "documentation" : { }
+        }, {
+          "id" : "4",
+          "tags" : "Element,Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "timberwatchliveview"
+          },
+          "name" : "Monitoring LiveView",
+          "description" : "Manage connections to client web browsers and dinamyc changes the HTML in real time",
+          "relationships" : [ {
+            "id" : "18",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "56d478c0-e7db-4822-86df-57a0816357f2"
+            },
+            "sourceId" : "4",
+            "destinationId" : "5",
+            "description" : "Subscribes to topic 'metrics_watcher'",
+            "technology" : "Pub/Sub"
+          }, {
+            "id" : "19",
+            "tags" : "Relationship",
+            "properties" : {
+              "structurizr.dsl.identifier" : "d3dfa6f6-262a-4160-b082-791cc4e6425a"
+            },
+            "sourceId" : "4",
+            "destinationId" : "6",
+            "description" : "Fetch sensors data with method get_sensors()",
+            "technology" : "GenServer/Call"
+          } ],
+          "technology" : "Phoenix LiveView Page",
+          "documentation" : { }
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "8",
+        "tags" : "Element,Container,Web Browser",
+        "properties" : {
+          "structurizr.dsl.identifier" : "singlepageapplication"
+        },
+        "name" : "Web Browser",
+        "description" : "Provides a real-time view of all the metrics using Phoenix Live View",
+        "relationships" : [ {
+          "id" : "17",
+          "sourceId" : "8",
+          "destinationId" : "3",
+          "description" : "Loads web page with sensors data",
+          "technology" : "HTTPS",
+          "linkedRelationshipId" : "16"
+        }, {
+          "id" : "16",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "a0e2ffc3-3e01-4d33-93f1-cc5bc86bcf12"
+          },
+          "sourceId" : "8",
+          "destinationId" : "4",
+          "description" : "Loads web page with sensors data",
+          "technology" : "HTTPS"
+        } ],
+        "technology" : "HTML/JavaScript",
+        "documentation" : { }
+      } ],
       "documentation" : { }
     } ]
   },
@@ -189,14 +267,14 @@
         "x" : 958,
         "y" : 583
       }, {
-        "id" : "7",
+        "id" : "9",
         "x" : 208,
         "y" : 908
       } ],
       "relationships" : [ {
-        "id" : "14"
+        "id" : "15"
       }, {
-        "id" : "9"
+        "id" : "11"
       } ]
     } ],
     "containerViews" : [ {
@@ -204,59 +282,113 @@
       "order" : 2,
       "softwareSystemId" : "2",
       "dimensions" : {
-        "width" : 2370,
-        "height" : 1674
-      },
-      "automaticLayout" : {
-        "implementation" : "Graphviz",
-        "rankDirection" : "LeftRight",
-        "rankSeparation" : 300,
-        "nodeSeparation" : 300,
-        "edgeSeparation" : 0,
-        "vertices" : false
+        "width" : 1612,
+        "height" : 1483
       },
       "externalSoftwareSystemBoundariesVisible" : true,
       "elements" : [ {
         "id" : "1",
-        "x" : 224,
-        "y" : 1073
+        "x" : 225,
+        "y" : 842
       }, {
         "id" : "3",
-        "x" : 949,
-        "y" : 519
+        "x" : 942,
+        "y" : 220
       }, {
-        "id" : "5",
-        "x" : 1699,
-        "y" : 819
+        "id" : "8",
+        "x" : 942,
+        "y" : 892
       }, {
-        "id" : "6",
-        "x" : 1699,
-        "y" : 219
-      }, {
-        "id" : "7",
-        "x" : 199,
-        "y" : 473
+        "id" : "9",
+        "x" : 200,
+        "y" : 220
       } ],
       "relationships" : [ {
-        "id" : "16",
+        "id" : "17",
         "vertices" : [ {
-          "x" : 1604,
-          "y" : 679
+          "x" : 1297,
+          "y" : 622
         } ]
       }, {
-        "id" : "13"
+        "id" : "14"
       }, {
-        "id" : "11",
+        "id" : "13",
         "vertices" : [ {
-          "x" : 1493,
-          "y" : 958
+          "x" : 1037,
+          "y" : 822
         } ]
       }, {
         "id" : "12"
       }, {
-        "id" : "8"
-      }, {
         "id" : "10"
+      } ]
+    } ],
+    "componentViews" : [ {
+      "key" : "Component-001",
+      "order" : 3,
+      "dimensions" : {
+        "width" : 2105,
+        "height" : 1931
+      },
+      "containerId" : "3",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 100,
+        "y" : 99
+      }, {
+        "id" : "4",
+        "x" : 795,
+        "y" : 654
+      }, {
+        "id" : "5",
+        "x" : 795,
+        "y" : 1439
+      }, {
+        "id" : "6",
+        "x" : 1535,
+        "y" : 1429
+      }, {
+        "id" : "7",
+        "x" : 1535,
+        "y" : 654
+      }, {
+        "id" : "8",
+        "x" : 795,
+        "y" : 149
+      }, {
+        "id" : "9",
+        "x" : 1535,
+        "y" : 149
+      } ],
+      "relationships" : [ {
+        "id" : "18",
+        "vertices" : [ {
+          "x" : 889,
+          "y" : 989
+        } ]
+      }, {
+        "id" : "16"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "12"
+      }, {
+        "id" : "22"
+      }, {
+        "id" : "21",
+        "vertices" : [ {
+          "x" : 1189,
+          "y" : 989
+        } ]
+      }, {
+        "id" : "20"
+      }, {
+        "id" : "19",
+        "vertices" : [ {
+          "x" : 1304,
+          "y" : 839
+        } ]
       } ]
     } ],
     "configuration" : {
@@ -280,7 +412,7 @@
       "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ],
       "terminology" : { },
       "metadataSymbols" : "SquareBrackets",
-      "lastSavedView" : "Container-001"
+      "lastSavedView" : "Component-001"
     }
   }
 }
