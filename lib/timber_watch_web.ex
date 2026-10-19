@@ -45,7 +45,7 @@ defmodule TimberWatchWeb do
         layouts: [html: TimberWatchWeb.Layouts]
 
       import Plug.Conn
-      import TimberWatchWeb.Gettext
+      use Gettext, backend: TimberWatchWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -88,7 +88,7 @@ defmodule TimberWatchWeb do
       # Core UI components and translation
       import TimberWatchWeb.CoreComponents
       import TimberWatchWeb.MonitoringComponents
-      import TimberWatchWeb.Gettext
+      use Gettext, backend: TimberWatchWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS

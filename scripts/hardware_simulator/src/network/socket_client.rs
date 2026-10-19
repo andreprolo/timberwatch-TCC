@@ -29,5 +29,5 @@ pub fn push(
 }
 
 fn send_message(socket: &mut WebSocket<MaybeTlsStream<TcpStream>>, message: String) {
-    socket.write_message(Message::Text(message)).unwrap();
+    socket.send(Message::Text(message)).unwrap();
 }

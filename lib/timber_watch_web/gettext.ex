@@ -5,7 +5,7 @@ defmodule TimberWatchWeb.Gettext do
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import TimberWatchWeb.Gettext
+      use Gettext, backend: TimberWatchWeb.Gettext
 
       # Simple translation
       gettext("Here is the string to translate")
@@ -20,5 +20,5 @@ defmodule TimberWatchWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :timber_watch
+  use Gettext.Backend, otp_app: :timber_watch
 end

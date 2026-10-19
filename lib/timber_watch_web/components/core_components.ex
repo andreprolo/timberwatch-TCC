@@ -17,7 +17,7 @@ defmodule TimberWatchWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import TimberWatchWeb.Gettext
+  use Gettext, backend: TimberWatchWeb.Gettext
 
   @doc """
   Renders a modal.
